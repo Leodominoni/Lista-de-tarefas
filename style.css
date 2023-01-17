@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@100;200;300;500;700;900&display=swap');
+:root{
+   --cor1: #BF6980;
+   --cor2: #F2527D;
+   --cor3: #F2A0AF;
+   --cor4: #0D0D0D;
+   --cor5: #8C4D5E;
+   --cor6: #287332;
+   --cor7: #69BF75;
+   --cor8: #BFBB98;
+   --cor9: #FFFFFF;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: var(--cor2);
+}
+.titulo{
+    font-family:'Sofia Sans Semi Condensed', sans-serif;
+    font-size: medium 600;
+}
