@@ -13,11 +13,110 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing:  border-box;
 }
 body{
+    display: flex;
+    justify-content: center;
     background: var(--cor2);
 }
+p{
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    font-weight: bold;
+}
+ul{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+}
+.header button{
+    position: absolute;
+    right: 18%;
+    margin-top: -30px;
+}
+.header i{
+    font-size: 20px;
+}
+.lista-de-tarefa{
+    margin-top: 40px;
+    width: 60%;
+}
 .titulo{
+    text-align: center;
     font-family:'Sofia Sans Semi Condensed', sans-serif;
-    font-size: medium 600;
+    font-size: 35px;
+    text-shadow: 2px 1px 2px var(--cor9);
+}
+.textInsert{
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    width: 90%;
+}
+.divInsert{
+    padding: 10px;
+    background: var(--cor8);
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 6px 5px 10px 0px var(--cor5);
+}
+button{
+    width: 10%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.bx-plus{
+    font-size: 30px;
+    margin-left: 10px;
+    background: var(--cor5);
+    border-radius: 50%;
+    padding: 5px;
+    color: var(--cor9);
+}
+.divLi{
+    margin-top: 20px;
+    padding: 10px;
+    background: var(--cor9);
+    box-shadow: 6px 5px 10px 0px var(--cor8);
+    display: flex;
+    align-items: center;
+}
+.divLi span{
+    width: 80%;
+    color: var(--cor6);
+}
+.divLi input{
+    width: 10%;
+    outline: none;
+    accent-color: currentcolor;
+}
+.divLi i{
+    font-size: 20px;
+    color: var(--cor7);
+}
+li{
+    list-style-type: none;
+}
+.line-through{
+    text-decoration: line-through;
+}
+@media (max-width: 775px) {
+    input{
+        width: 70%;
+    }
+    .divInsert button{
+        width: 30%;
+    }
+    i {
+        font-size: 30px;
+        padding: 0;
+    }
+    p{
+        font-size: large;
+    }
 }
