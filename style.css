@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@100;200;300;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500;600&display=swap');
 :root{
-   --cor1: #BF6980;
-   --cor2: #F2527D;
-   --cor3: #F2A0AF;
+   --cor1: #F2F2F2;
+   --cor2: #6F96A6;
+   --cor3: #F2CD88;
    --cor4: #0D0D0D;
-   --cor5: #8C4D5E;
-   --cor6: #287332;
-   --cor7: #69BF75;
-   --cor8: #BFBB98;
-   --cor9: #FFFFFF;
+   --cor6: #8C4D5E;
+   --cor7: #BF947A;
+   --cor8: #69BF75;
+   --cor9: #8C031C;
 }
 *{
     margin: 0;
@@ -18,13 +18,16 @@
 body{
     display: flex;
     justify-content: center;
-    background: var(--cor2);
+    font-family: 'Kanit', sans-serif;
+    background: url(imagens/janela-e-chuva-disco-tocando-na-vitrola.gif) no-repeat center;
+    background-size: cover;  
+    height: 100%;
+    width: 100%;
 }
 p{
     display: flex;
     justify-content: center;
-    font-size: large;
-    font-weight: bold;
+
 }
 ul{
     display: flex;
@@ -39,15 +42,13 @@ ul{
 .header i{
     font-size: 20px;
 }
-.lista-de-tarefa{
+.todolist{
     margin-top: 40px;
     width: 60%;
 }
 .titulo{
     text-align: center;
-    font-family:'Sofia Sans Semi Condensed', sans-serif;
-    font-size: 35px;
-    text-shadow: 2px 1px 2px var(--cor9);
+    font-size: 29px;
 }
 .textInsert{
     border: none;
@@ -57,11 +58,11 @@ ul{
     width: 90%;
 }
 .divInsert{
-    padding: 10px;
+    padding: 12px;
     background: var(--cor8);
     border-radius: 10px;
     display: flex;
-    box-shadow: 6px 5px 10px 0px var(--cor5);
+    box-shadow: 6px 5px 10px var(--cor1);
 }
 button{
     width: 10%;
@@ -73,22 +74,23 @@ button{
 .bx-plus{
     font-size: 30px;
     margin-left: 10px;
-    background: var(--cor5);
+    background: var(--cor4);
     border-radius: 50%;
     padding: 5px;
-    color: var(--cor9);
+    color: var(--cor1);
 }
 .divLi{
     margin-top: 20px;
     padding: 10px;
-    background: var(--cor9);
-    box-shadow: 6px 5px 10px 0px var(--cor8);
+    background: var(--cor2);
+    box-shadow: 6px 5px 10px var(--cor1);
+    border-radius: 10px;
     display: flex;
     align-items: center;
 }
 .divLi span{
     width: 80%;
-    color: var(--cor6);
+    color: var(--cor4);
 }
 .divLi input{
     width: 10%;
@@ -96,8 +98,8 @@ button{
     accent-color: currentcolor;
 }
 .divLi i{
-    font-size: 20px;
-    color: var(--cor7);
+    font-size: 22px;
+    color: var(--cor6);
 }
 li{
     list-style-type: none;
@@ -107,16 +109,16 @@ li{
 }
 @media (max-width: 775px) {
     input{
-        width: 70%;
+        width: 90%;
     }
     .divInsert button{
-        width: 30%;
+        width: 20%;
     }
     i {
-        font-size: 30px;
+        font-size: 25px;
         padding: 0;
     }
     p{
-        font-size: large;
+        font-size: medium;
     }
 }
