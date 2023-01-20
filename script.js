@@ -83,3 +83,16 @@ function removeItem(i) {
 }
 
 loadItens()
+
+/* TEMAS */
+function setTheme (themeName) {
+  document.body.className = themeName || ''
+}
+
+function isUsingDarkTheme () {
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+}
+
+if (isUsingDarkTheme()) {
+  setTheme('theme-dark')
+}

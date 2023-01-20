@@ -1,36 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@100;200;300;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500;600&display=swap');
-:root{
-   --cor1: #F2F2F2;
-   --cor2: #6F96A6;
-   --cor3: #F2CD88;
-   --cor4: #0D0D0D;
-   --cor6: #8C4D5E;
-   --cor7: #BF947A;
-   --cor8: #69BF75;
-   --cor9: #8C031C;
-}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing:  border-box;
 }
-body{
+.tema-button{
+    display: inline-block;
+}
+body {
+    --theme-background: #BFBB98;
+    --theme-foreground: #222222;
+    --theme-accent-background: #6F96A6;
+    --theme-accent-foreground: #F2F2F2;
+    --theme-icon: #8C031C;
+
+}
+body.theme-dark {
+    --theme-background: #4D8C56;
+    --theme-foreground: #222222;
+    --theme-accent-background: #69BF75;
+    --theme-accent-foreground: #222222;
+    --theme-icon: #8C031C;
+    background: url(imagens/2160c7949ac4fc9f4eefced40ca24318.jpg) no-repeat center;
+    background-size: cover;
+}
+
+body.theme-pink {
+    --theme-background: #c6016b;
+    --theme-foreground: #422731;
+    --theme-accent-background: #ff6bb9;
+    --theme-accent-foreground: #F2F2F2;
+    --theme-icon: #8C031C;
+    background: url(imagens/rosa-arbor.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Aqui começa o CSS padrão */
+body {
+    background: var(--theme-background);
+    color: var(--theme-foreground);
     display: flex;
     justify-content: center;
     font-family: 'Kanit', sans-serif;
     background: url(imagens/janela-e-chuva-disco-tocando-na-vitrola.gif) no-repeat center;
-    background-size: cover;  
-    height: 100%;
-    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
 }
-p{
-    display: flex;
-    justify-content: center;
 
+button, select {
+    background: var(--theme-accent-background);
+    color: var(--theme-accent-foreground);    
+    padding: 0.5em 1em;    
+    border: 0px none;
+    border-radius: 3px;
+}
+
+/* SEU BODY */
+
+p{
+    justify-content: center;
 }
 ul{
-    display: flex;
     flex-direction: column-reverse;
     margin-bottom: 20px;
 }
@@ -40,7 +72,7 @@ ul{
     margin-top: -30px;
 }
 .header i{
-    font-size: 20px;
+    font-size: 22px;
 }
 .todolist{
     margin-top: 40px;
@@ -48,7 +80,10 @@ ul{
 }
 .titulo{
     text-align: center;
-    font-size: 29px;
+    font-size: 30px;
+}
+.bxs-eraser{
+    background: var(--theme-accent-background);
 }
 .textInsert{
     border: none;
@@ -59,10 +94,10 @@ ul{
 }
 .divInsert{
     padding: 12px;
-    background: var(--cor8);
+    background: var(--theme-background);
     border-radius: 10px;
     display: flex;
-    box-shadow: 6px 5px 10px var(--cor1);
+    box-shadow: 6px 5px 10px var(--theme-accent-foregroundd);
 }
 button{
     width: 10%;
@@ -74,23 +109,23 @@ button{
 .bx-plus{
     font-size: 30px;
     margin-left: 10px;
-    background: var(--cor4);
+    background: var(--theme-accent-background);
     border-radius: 50%;
     padding: 5px;
-    color: var(--cor1);
+    color: var(--theme-accent-foreground);
 }
 .divLi{
     margin-top: 20px;
     padding: 10px;
-    background: var(--cor2);
-    box-shadow: 6px 5px 10px var(--cor1);
+    background: var(--theme-accent-background);
+    box-shadow: 6px 5px 10px var(--theme-background);
     border-radius: 10px;
     display: flex;
     align-items: center;
 }
 .divLi span{
     width: 80%;
-    color: var(--cor4);
+    color: var(--theme-foregroundnd);
 }
 .divLi input{
     width: 10%;
@@ -99,13 +134,19 @@ button{
 }
 .divLi i{
     font-size: 22px;
-    color: var(--cor6);
+    color: var(--theme-icon);
 }
 li{
     list-style-type: none;
 }
 .line-through{
     text-decoration: line-through;
+}
+@media(max-width:500px){
+
+.tema-button{
+    display: grid;
+}
 }
 @media (max-width: 775px) {
     input{
