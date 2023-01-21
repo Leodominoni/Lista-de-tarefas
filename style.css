@@ -5,9 +5,6 @@
     padding: 0;
     box-sizing:  border-box;
 }
-.tema-button{
-    display: inline-block;
-}
 body {
     --theme-background: #BFBB98;
     --theme-foreground: #222222;
@@ -25,10 +22,9 @@ body.theme-dark {
     background: url(imagens/2160c7949ac4fc9f4eefced40ca24318.jpg) no-repeat center;
     background-size: cover;
 }
-
 body.theme-pink {
     --theme-background: #c6016b;
-    --theme-foreground: #422731;
+    --theme-foreground: #222222;
     --theme-accent-background: #ff6bb9;
     --theme-accent-foreground: #F2F2F2;
     --theme-icon: #8C031C;
@@ -48,7 +44,6 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
-
 button, select {
     background: var(--theme-accent-background);
     color: var(--theme-accent-foreground);    
@@ -56,8 +51,6 @@ button, select {
     border: 0px none;
     border-radius: 3px;
 }
-
-/* SEU BODY */
 
 p{
     justify-content: center;
@@ -143,14 +136,21 @@ li{
     text-decoration: line-through;
 }
 @media(max-width:500px){
+    input{
+        width: 60%;
+    }
+    .divInsert button{
+        width: 18%;
+    }
+    i {
+        font-size: 22px;
+        padding: 0;
+    }
 
-.tema-button{
-    display: grid;
-}
 }
 @media (max-width: 775px) {
     input{
-        width: 90%;
+        width: 70%;
     }
     .divInsert button{
         width: 20%;
@@ -159,7 +159,5 @@ li{
         font-size: 25px;
         padding: 0;
     }
-    p{
-        font-size: medium;
-    }
+
 }

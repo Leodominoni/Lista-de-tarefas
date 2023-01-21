@@ -9,14 +9,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Lista de tarefas</title>
 </head>
-<header class="tema-button">
-<select onchange="setTheme(this.value)">
-    <option>- Selecione um Tema -</option>
-    <option value="theme-light">Tema Azul</option>
-    <option value="theme-dark">Tema Verde</option>
-    <option value="theme-pink">Tema Rosa</option>
-</select>
-</header>
 <body>
     <div class="todolist">
         <div class="header">
@@ -31,6 +23,15 @@
         </div>
         <ul></ul>
     </div>
+    <div class="theme">
+        <select onchange="setTheme(this.value)">
+            <option>- Selecione um Tema -</option>
+    <option value="theme-light">Tema Azul</option>
+            <option value="theme-dark">Tema Verde</option>
+            <option value="theme-pink">Tema Rosa</option>
+        </select>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
